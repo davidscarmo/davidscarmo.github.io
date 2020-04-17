@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* 
+{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "Rubik", sans-serif; 
+    background-color: #3062DB;
+
+}
+
+/* Main Grid */
+
+.mainGrid
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "header"
+    "whoami"
+    "techs"
+    "footer";
+    width: 100%;
+    grid-gap: 0px;
+}
+
+.header 
+{
+    grid-area: header; 
+    background-image: url("../images/header_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "logo"
+    "name"
+    "profession"
+    "techs"
+    "arrowDown";
+    align-items: center;
+    
+}
+
+.logoArea
+{
+    grid-area: logo;
+    grid-column-gap: 0px;
+   
+}
+
+.logoArea img 
+{
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+@media(max-width:400px)
+{
+    .logoArea img
+    {
+        max-width: 200px;
+    }
+}
+
+.name
+{
+    grid-area: name;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.name h1
+{
+    font-size: 3em;
+   
+}
+
+.name p
+{
+    font-size: 2em;
+}
+
+.contact 
+{
+    display: flex;
+    max-width: 300px;
+    max-height: 50px;
+    justify-content: center;
+    margin: 20px auto;
+    
+}
+
+.contact img
+{
+    max-width: 70px;
+    max-height: 70px;
+    transition: opacity 1.2s;
+}
+
+.contact img:hover
+{
+    opacity: 0.5;
+    
+}
+
+.linkedin, .github
+{
+    margin-right: 10px;
+}
+
+.arrowNextSection
+{
+    max-width: 50px;
+    margin: 20px auto;
+    margin-top: 30px;
+    position: relative;
+   
+}
+
+@keyframes arrowDown
+{
+    from{top:0}
+    to{top:5px}
+}
+
+.arrowNextSection img
+{
+    width: 100%;
+    display: block;
+    position: relative;
+    animation-name: arrowDown;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* Who am I?  */
+
+.whoAmI 
+{
+    grid-area: whoami;
+    background-color: #f3f3f3;
+}
+.whoAmIArea
+{
+    min-height: 400px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    
+}
+.whoAmI h1 
+{
+    font-size: 2.3em;
+    color: #3062DB;
+}
+
+.whoAmI p 
+{
+    font-size: 1.2em;
+    color: rgb(27, 19, 19);
+    font-weight: 400;
+    color: #3062DB;
+}
+
+.perfil 
+{
+    max-width: 160px;
+    margin: 15px auto;
+   
+}
+
+.perfil img 
+{
+    width: 100%;
+    max-height: 150px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+#blueArrow 
+{
+    margin: 0 auto 15px auto;
+}
+.techs
+{
+    grid-area: techs;
+    display: grid;
+    max-width: 960px;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "techsTitle techsTitle techsTitle"
+    "tech1 tech2 tech3" ;
+    align-items: start;
+    margin: 10px auto;
+    text-align: center;
+    border-top: 3.5px solid #ffffff;
+    border-bottom: 3.5px solid #ffffff;
+    border-radius: 50px;
+    color: #ffffff;
+    padding: 30px;
+}
+
+
+
+.techsTitle 
+{
+    grid-area: techsTitle;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tech1 
+{
+    grid-area: tech1;
+    margin-right: 30px;
+}
+
+.trioTech 
+{
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.trioTech img 
+{
+    width: 100%;
+}
+.tech2 
+{
+    grid-area: tech2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "techTitle2 techTitle2 techTitle2"
+    "node react native"
+    "techDescription2 techDescription2  techDescription2 ";
+    max-width: 1fr;
+}
+
+
+
+.techTitle2
+{
+    grid-area: techTitle2;
+    margin-bottom: 30px;
+}
+.react, .node, .native
+{
+    margin-top: 30px;
+    margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.react 
+{
+    grid-area: react;
+}
+
+.react img
+{
+    width: 65px;
+    display: block;
+    margin: 0 auto;
+}
+
+.node 
+{
+    grid-area: node;
+    width: 65px;
+   
+}
+
+.node img 
+{
+    width: 100%;
+}
+
+
+.native 
+{
+    grid-area: native;
+    width: 65px;
+}
+
+.native img 
+{
+    width: 100%;
+   
+
+}
+.techDescription2 
+{
+    grid-area: techDescription2;
+}
+.tech3 
+{
+    grid-area: tech3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "techTitle3 techTitle3 techTitle3"
+    "vscode google github"
+    "techDescription3 techDescription3  techDescription3 ";
+    max-width: 1fr;
+}
+
+.techTitle3
+{
+    grid-area: techTitle3;
+}
+
+.vscode 
+{
+    grid-area: vscode;
+    width: 65px;
+}
+.vscode img
+{
+    width:100%;
+}
+
+.google
+{
+    grid-area: google;
+    width: 65px;
+}
+.google img
+{
+    width:100%;
+}
+.githubTech
+{
+    grid-area: github;
+    width: 65px;
+}
+.githubTech img
+{
+    width: 100%;
+} 
+.techDescription3
+{
+    grid-area: techDescription3;
+}
+
+.vscode, .githubTech, .google
+{
+    margin-top: 55px;
+    margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer 
+{
+    grid-area: footer;
+    background-color: #f3f3f3;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 75px;
+    display: grid;
+    align-items: center;
+    color: #3062DB;
+    padding: 30px;
+}
